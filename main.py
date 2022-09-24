@@ -7,6 +7,4 @@ SQL Goes Here
 """, conn)
 print(df)
 
-
-
 conn.close()
