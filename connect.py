@@ -1,11 +1,7 @@
-import psycopg2
+import pyodbc
 
 
-
-
-conn = psycopg2.connect("""dbname=Salary_Data 
-                           user=postgres
-                           password=Limbless123
-                           host=localhost
-                           port=5432
-                        """)
+conn = pyodbc.connect('DRIVER={SQL Server};SERVER=limbdev.database.windows.net,1433',
+                      user='limbdevazure',
+                      password='Limbless123',
+                      database='limb_base_beta')
