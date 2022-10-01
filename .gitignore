@@ -3,3 +3,4 @@ connect
 __pycache__
 sqltools_20220923210825_21600
 sqltools_20220924224028_10768.log
+*.log
