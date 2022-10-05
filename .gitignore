@@ -2,3 +2,4 @@ connect.py
 .vscode
 __pycache__
 *.log
+connect
