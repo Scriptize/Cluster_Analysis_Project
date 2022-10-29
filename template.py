@@ -9,8 +9,6 @@ print(df)
 
 conn.close()
 
-
-
 #Welcome to your python file! Here is where you'll work on making your "puzzle piece"
 
 #From top to bottom:
