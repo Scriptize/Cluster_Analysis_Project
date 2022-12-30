@@ -3,9 +3,29 @@ import pandas as pd
 
 df = pd.read_sql(
     """
-SELECT fedMinWage FROM US_Min_Wage
+  SELECT Year, FedMinWage, HouseParty, SenParty, PresParty
+    FROM US_Min_Wage
+      WHERE Year > 1997 and Year < 2019
+
 """, conn)
-print(df)
+
+
+numHouse = 0
+df["Rep Control"] = 0
+df["Dem Control"] = 0
+
+
+df.loc[df['HouseParty'] == "Republican", "Rep Control"] += 33.33333333
+df.loc[df['SenParty'] == "Republican", "Rep Control"] += 33.33333333
+df.loc[df['PresParty'] == "Republican", "Rep Control"] += 33.33333333
+
+df.loc[df['HouseParty'] == "Democrat", "Dem Control"] += 33.33333333
+df.loc[df['SenParty'] == "Democrat", "Dem Control"] += 33.33333333
+df.loc[df['PresParty'] == "Democrat", "Dem Control"] += 33.33333333
+
+
+df_rounded = df.round()
+print(df_rounded)
 
 conn.close()
 
