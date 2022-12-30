@@ -14,17 +14,12 @@ df[columns] = df[columns].apply(pd.to_numeric)
 df = df.round(decimals=3)
 
 # Remove the "Country Code" from the Data Frame
-df = df.drop('Country Code', axis=1)
+df_new = df.drop('Country Code', axis=1)
 
+#Prints DataFrame that excludes Country Code
+print(df_new)
+
+# Prints DataFrame that includes Country Code
 print(df)
 
-dataframe2 = 
-
 conn.close()
-
-#Welcome to your python file! Here is where you'll work on making your "puzzle piece"
-
-#From top to bottom:
-#1) The two lines up top are the imports; u need these to access the database!(Check out the connect.py file. It has our login info; its not in here for security puposes)
-#2) Next is your bread and butter, should be familiar if you've taken a look at pandas. this line takes in a sql query as a string and converts it into a pandas dataframe. The next line prints it out so you have a good idea of what it looks like.
-#3) Finally, we use conn.close() to log out of the database and disconnect.
