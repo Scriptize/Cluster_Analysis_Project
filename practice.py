@@ -26,11 +26,31 @@ def add(x,y):
     final = x + y
     
     return
+
+
 new_list = []
 initial = "1980/12/02"
 date_list = initial.split("/")
 new_date = "{}/{}/{}".format(date_list[2],date_list[1],date_list[0])
 
+#INITIALIZING NEW LIST
+new_list = []
+
+# LIST APPENDING
+fruits = ['apple', 'banana', 'cherry']
+fruits.append("orange")
+# fruits = ['apple', 'banana', 'cherry', orange]
+
+# FOR LOOPS
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+# apple
+# banana
+# cherry
+
 # Create a function that accepts a list as a parameter,loops through each date in the list, reformats it, and returns a new list
 
-def transfer(x):
+
+def new_dates(date_list): # I named the function and the parameter for you; treat date_list as a list throughout the function
+  
